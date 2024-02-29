@@ -76,7 +76,7 @@ const handleShowDetail = async (id) =>{
         showDetailContainer.innerHTML = `
         <img src="${phone.image}" alt=""/>
         <p><span>Storage:</span>${phone?.mainFeatures.storage}</p>
-        <p><span>GPS:</span>${phone?.others?.GPS ||'No GPS Available'}</p>
+        <p><span>GPS:</span>${phone?.others?.GPS ? phone.others.GPS : 'No GPS available is this device'}</p>
         `
         //show the modal
         show_details_modal.showModal();
